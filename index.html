@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Nikkiii! ♡</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --pink: #f6c7d7;
+  --light-pink: #fff0f5;
+  --dark-pink: #c45d83;
+  --text: #684354;
+  --white: #fffdfd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--light-pink);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--pink);
+}
+
+.cursor-heart {
+  position: fixed;
+  bottom: -30px;
+  z-index: 10;
+  pointer-events: none;
+  animation: floatUp 6s linear forwards;
+  opacity: .75;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  15% { opacity: .8; }
+  100% { transform: translateY(-110vh) rotate(30deg); opacity: 0; }
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  padding: 35px 20px 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background:
+    radial-gradient(ellipse at top left, #ffe0eb 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, #f7ccdc 0%, transparent 55%),
+    #fff7fa;
+}
+
+.top-note {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dark-pink);
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 9vw, 90px);
+  line-height: 1.12;
+  font-weight: 500;
+  color: #9d4569;
+}
+
+.hero h1 em {
+  color: #d47b9c;
+  font-weight: 500;
+}
+
+.hero p {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 420px;
+}
+
+.hero-decoration {
+  font-size: 25px;
+  margin: 25px 0 30px;
+  letter-spacing: 12px;
+}
+
+.main-button {
+  display: inline-block;
+  background: #c96e91;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 27px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 22px #dca2b866;
+  transition: .3s;
+}
+
+.main-button:hover {
+  transform: translateY(-4px);
+  background: #ae5278;
+}
+
+.scroll-note {
+  position: absolute;
+  bottom: 24px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #b78398;
+}
+
+/* SECTION STYLES */
+
+section {
+  padding: 90px 20px;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--dark-pink);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: clamp(30px, 6vw, 47px);
+  font-weight: 500;
+  color: #9d4569;
+  margin-bottom: 18px;
+}
+
+.section-subtitle {
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.9;
+  max-width: 520px;
+  margin: 0 auto 40px;
+}
+
+/* PHOTO GALLERY */
+
+.gallery-section {
+  background: #fffafd;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.photo-card {
+  background: white;
+  padding: 10px 10px 17px;
+  border-radius: 5px;
+  box-shadow: 0 8px 30px #a75d7c12;
+  transform: rotate(-2deg);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.photo-card:nth-child(2) {
+  transform: rotate(2deg);
+  margin-top: 25px;
+}
+
+.photo-card:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) rotate(0deg);
+  box-shadow: 0 15px 35px #a75d7c25;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+  background: #f9dce7;
+}
+
+.photo-caption {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  margin-top: 13px;
+  font-size: 15px;
+}
+
+.photo-number {
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 6px;
+  color: #c08ba0;
+}
+
+/* FRIENDSHIP NOTE */
+
+.note-section {
+  background: #fbe3ec;
+}
+
+.note-paper {
+  max-width: 730px;
+  margin: 40px auto 0;
+  padding: clamp(25px, 6vw, 55px);
+  background: #fffafc;
+  border: 1px solid #f1cbd9;
+  box-shadow: 0 12px 35px #a75d7c0d;
+  position: relative;
+}
+
+.note-paper::before {
+  content: "♡";
+  position: absolute;
+  top: 15px;
+  right: 22px;
+  color: #d99ab2;
+  font-size: 24px;
+}
+
+.letter-date {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bd7a96;
+  margin-bottom: 24px;
+}
+
+.note-paper h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #a34f72;
+  margin-bottom: 25px;
+}
+
+.letter-content {
+  font-size: 14px;
+  line-height: 2.05;
+  white-space: pre-line;
+}
+
+.letter-content p {
+  margin-bottom: 19px;
+}
+
+.signature {
+  margin-top: 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 21px;
+  color: #bd6288;
+}
+
+/* LITTLE WISHES */
+
+.wishes-section {
+  background: #fff8fb;
+}
+
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.wish-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: white;
+  border: 1px solid #f5dce6;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.wish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #b46b8812;
+}
+
+.wish-icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.wish-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #a34f72;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.wish-card p {
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* FINAL SECTION */
+
+.final-section {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(140deg, #f7d5e2, #fff3f7, #f5cfdf);
+}
+
+.final-section .big-15 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(95px, 22vw, 180px);
+  line-height: 1;
+  color: #d17c9e;
+  opacity: .85;
+}
+
+.final-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(30px, 6vw, 48px);
+  color: #9d4569;
+  margin: 20px 0;
+}
+
+.final-section p {
+  max-width: 450px;
+  margin: 0 auto 25px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.surprise {
+  display: none;
+  max-width: 460px;
+  margin: 25px auto 0;
+  background: #fffafd;
+  padding: 25px;
+  border-radius: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  line-height: 1.8;
+  animation: popIn .5s ease;
+}
+
+.surprise.show {
+  display: block;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  padding: 25px 15px;
+  text-align: center;
+  background: #fffafd;
+  color: #b78398;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+  section {
+    padding: 65px 17px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 35px auto 0;
+    gap: 22px;
+  }
+
+  .photo-card,
+  .photo-card:nth-child(2),
+  .photo-card:nth-child(3) {
+    transform: rotate(0deg);
+    margin-top: 0;
+  }
+
+  .photo-card img {
+    height: 330px;
+  }
+
+  .wishes-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 35px auto 0;
+  }
+
+  .note-paper {
+    padding: 28px 22px;
+  }
+
+  .letter-content {
+    font-size: 13px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BIRTHDAY INTRO -->
+
+<header class="hero">
+  <div class="top-note">a little birthday surprise chuu</div>
+
+  <h1>Happy 15th<br><em>Birthday, MY DUBAI CHOCOLATE CHEWY COOKIE!</em></h1>
+
+  <p>
+    To one of my favourite people in the entire WORLD.
+    Today is all about celebrating YOU, your happiness,
+    and the amazing person you are becominggg.
+  </p>
+
+  <div class="hero-decoration">୨୧ ♡ 🎀 ♡ ୨୧</div>
+
+  <a href="#pictures" class="main-button">OPEN YOUR SURPRISE ♡</a>
+
+  <div class="scroll-note">SCROLL DOWN FOR YOUR SURPRISE ↓</div>
+</header>
+
+
+<!-- PHOTO GALLERY -->
+
+<section class="gallery-section" id="pictures">
+  <div class="section-inner">
+    <div class="eyebrow">a little photo album</div>
+    <h2 class="section-title">The birthday girl ♡</h2>
+
+    <p class="section-subtitle">
+      A few pictures of the prettiest birthday girl today.
+      Obviously, you deserve your own little galleryyy.
+    </p>
+
+    <div class="gallery">
+
+      <div class="photo-card">
+        <img src="nik.jpg" alt="Birthday girl photo 1">
+        <div class="photo-caption">My cutie♡</div>
+        <div class="photo-number">PHOTO NO.01</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="ki.jpg" alt="Birthday girl photo 2">
+        <div class="photo-caption">OUUU MAMA U IS FIONE</div>
+        <div class="photo-number">PHOTO NO.02</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="ii.jpg" alt="Birthday girl photo 3">
+        <div class="photo-caption">HOTTIE</div>
+        <div class="photo-number">PHOTO NO.03</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- THE LONG BEST FRIEND LETTER -->
+
+<section class="note-section" id="letter">
+  <div class="section-inner">
+    <div class="eyebrow">something from my big fat heart</div>
+    <h2 class="section-title">A letter for youu</h2>
+
+    <p class="section-subtitle">
+      Because one birthday message could never be enough
+      for someone as special as you, NIKKII
+    </p>
+
+    <div class="note-paper">
+      <div class="letter-date">your birthday surprisee</div>
+
+      <h3>Happy birthday, my dubai chocolate chewy cookie. ♡</h3>
+
+      <div class="letter-content">
+
+<p>HAPPY BIRTHDAYYYYY!!</p>
+
+<p>FIRST OF ALL, YOU ARE FIFTEEN NOW. FIFTEEN. HELLO??? WHEN DID YOU GET THIS OLD? I genuinely feel like time is moving way too fast because how are we already at this point? Anyway, enough about that because TODAY IS NIKKI DAYYYY, and I hope you know that you deserve to have the happiest, loveliest, most wonderful birthday ever. Like seriously, I hope today makes you smile so much that your cheeks start hurting, and I hope you get to enjoy every little moment of it because you deserve that and so much more.</p>
+
+<p>I honestly don't even know where to start because there are so many things I want to say to you. I could probably sit here typing for hours and still feel like I haven't said enough. But I guess the first thing I want you to know is that I'm genuinely so grateful to have you as my best friend. Out of all the people we could have met and all the friendships we could have had, I'm really glad that somehow, we ended up becoming friends and I hope you know that our friendship means a lot to me, even if I don't always say it properly.</p>
+
+<p>You're someone I can laugh with over the most ridiculous things ever. Sometimes we probably laugh at things that wouldn't even make sense to anyone else, and honestly, I think that's one of the best parts of having a best friend. It's having someone who understands your nonsense, someone you can be completely weird around, and someone who can turn an ordinary day into a really special memory without even trying. Those little moments might not seem like a big deal at the time, but they're the kind of things I end up appreciating so much.</p>
+
+<p>I hope you never feel like you have to act differently around me just to be liked or accepted. You don't need to be interesting every second, you don't need to be happy all the time, and you definitely don't need to pretend that everything is fine when it isn't. You can have bad days, you can be annoyed, you can be quiet, and you can be your completely unfiltered idiotic self. You're still my best friend through all of that. Friendship isn't about being perfect or always knowing what to say. Sometimes it's just about being there, listening, laughing at stupid things, and making sure the other person knows they aren't alone.</p>
+
+<p>And please, PLEASE, never forget how much you matter as a person. Not because of how you look, how well you do in school, how many people like you, or how much attention you get. You matter simply because you're YOU. There is so much more to you than the things you might judge yourself for, and I really hope that as you grow older, you learn to see more of the good things in yourself. I hope you become more confident in who you are, more comfortable with being yourself, and less worried about whether everyone else approves of you.</p>
+
+<p>Now that you're fifteen, I hope this year brings you so many good things. I hope you make memories that you will still laugh about years from now. I hope you discover new things you love, try things you've always wanted to try, and give yourself the chance to experience things that make you genuinely happy. I hope you meet people who appreciate you, make friends who bring out the best in you, and find opportunities that help you grow into the person you want to become.</p>
+
+<p>I also hope that when things don't go the way you planned, you remember that one difficult day doesn't define your entire life. You don't have to have everything figured out at fifteen. You don't need to know exactly who you're going to become, what your future will look like, or how everything is supposed to work out. We're still growing, learning, making mistakes, changing our minds, and figuring ourselves out. So please don't put too much pressure on yourself to have everything together. Take your time, enjoy being OLD and let yourself make mistakess, learn from themm, and try againnnn.</p>
+
+<p>I hope you give yourself permission to rest when you're tired, to celebrate yourself when something goes well, and to be proud of even the little things you accomplish. Sometimes we get so focused on the things we haven't done yet that we forget to appreciate how far we've already come. I hope this year teaches you to be kinder to yourself and to recognise your own progress, even when it feels small.</p>
+
+<p>And, obviously, I hope you get LOTS AND LOTS OF HAPPINESS THIS YEAR. Like, an unreasonable amount of happiness. I hope you have days where everything seems to go right, days filled with your favourite food, your favourite songs, funny conversations, unexpected surprises, and people who make you feel appreciated. I hope you laugh until you can't breathe, take a ridiculous number of pictures, and have so many little moments that make you think, 'Wait, life is actually pretty nice sometimes.'</p>
+
+<p>I'm also wishing you good health, good luck, success in your studies, and the strength to get through the difficult parts of life. I hope you achieve the goals you've been working towards, but I also hope you remember that your grades and achievements aren't the only things that make you valuable. You deserve to feel proud of yourself for trying, for learning, for being brave enough to keep going, and for all the effort that other people might not even notice.</p>
+
+<p>Thank you for being my best friend. Thank you for the conversations, the laughs, the random moments, and all the little things that make our friendship what it is. Thank you for being someone I can share parts of my life with. I'm sure we haven't even made all the memories we're going to look back on someday, and I really hope there are so many more waiting for us.</p>
+
+<p>Of course, no friendship is perfect. We're both human, and there might be times when we're busy, misunderstand each other, get annoyed, or don't know how to explain what we're feeling. But I hope we can always try to communicate honestly, understand each other, and remember that being friends means giving each other room to grow. We don't have to agree on absolutely everything to care about each other. We just have to keep treating each other with kindness and respect.</p>
+
+<p>I hope that when you look back on being fifteen, you remember it as a year when you laughed a lot, learned a lot, and slowly became even more yourself. I hope you collect experiences rather than worrying too much about having everything perfect. I hope you find little things that make ordinary days exciting. And I hope you never stop being curious about the world or about the person you're becoming.</p>
+Also, just because it's your birthday doesn't mean I'm going to stop annoying you, so don't get too comfortable. Unfortunately for you, being my best friend means you have to put up with my nonsense for an unknown number of years. There is no cancel POLICY, and absolutely NO refund available.</p>
+
+<p>But seriously, I hope you know that you can always talk to me when you need someone to listen. I might not always have the perfect advice, and sometimes I might not know what to say, but I'll try my best to understand you. You don't have to turn every problem into a joke or pretend to be okay just because you don't want to bother anyone. Your feelings matter, too. And even when I can't fix whatever is bothering you, I can still listen and remind you that you don't have to figure everything out all by yourself.</p>
+
+<p>One of the things I wish for you most is that you never lose the little things that make you who you are. Keep the things that make you laugh, keep exploring the things that interest you, keep finding reasons to be excited about life, and keep allowing yourself to change. You are allowed to outgrow old interests, discover new ones, and become a different version of yourself as the years pass. Growing up doesn't mean you have to have everything figured out. It just means you get to keep discovering more about yourself.</p>
+      </div>
+
+      <div class="signature">
+        your pumpkin pie, always supporting you♡
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+// Floating hearts
+const decorations = ["♡", "୨୧", "✿", "♥", "⋆"];
+
+function createDecoration() {
+  const item = document.createElement("div");
+  item.className = "cursor-heart";
+  item.textContent =
+    decorations[Math.floor(Math.random() * decorations.length)];
+
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (12 + Math.random() * 17) + "px";
+  item.style.color = ["#d47b9c", "#e8a6be", "#bd6288"][
+    Math.floor(Math.random() * 3)
+  ];
+
+  const duration = 5 + Math.random() * 4;
+  item.style.animationDuration = duration + "s";
+
+  document.body.appendChild(item);
+
+  setTimeout(() => item.remove(), duration * 1000);
+}
+
+setInterval(createDecoration, 650);
+
+// Surprise button
+const surpriseButton = document.getElementById("surpriseButton");
+const surpriseMessage = document.getElementById("surpriseMessage");
+
+surpriseButton.addEventListener("click", () => {
+  surpriseMessage.classList.toggle("show");
+
+  if (surpriseMessage.classList.contains("show")) {
+    surpriseButton.textContent = "A LITTLE MORE LOVE FOR YOU ♡";
+
+    // Birthday confetti effect
+    for (let i = 0; i < 25; i++) {
+      setTimeout(createDecoration, i * 80);
+    }
+  } else {
+    surpriseButton.textContent = "ONE LAST LITTLE SURPRISE ♡";
+  }
+});
+</script>
+
+</body>
+</html>
